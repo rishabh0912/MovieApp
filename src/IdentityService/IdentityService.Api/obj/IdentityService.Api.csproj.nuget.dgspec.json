@@ -1,0 +1,329 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Api/IdentityService.Api.csproj": {}
+  },
+  "projects": {
+    "/Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Api/IdentityService.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Api/IdentityService.Api.csproj",
+        "projectName": "IdentityService.Api",
+        "projectPath": "/Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Api/IdentityService.Api.csproj",
+        "packagesPath": "/Users/rishabhtandon/.nuget/packages/",
+        "outputPath": "/Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Api/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/rishabhtandon/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-public/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Application/IdentityService.Application.csproj": {
+                "projectPath": "/Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Application/IdentityService.Application.csproj"
+              },
+              "/Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Infrastructure/IdentityService.Infrastructure.csproj": {
+                "projectPath": "/Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Infrastructure/IdentityService.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "OpenTelemetry.Exporter.Console": {
+              "target": "Package",
+              "version": "[1.15.0, )"
+            },
+            "OpenTelemetry.Exporter.OpenTelemetryProtocol": {
+              "target": "Package",
+              "version": "[1.15.0, )"
+            },
+            "OpenTelemetry.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[1.15.0, )"
+            },
+            "OpenTelemetry.Instrumentation.AspNetCore": {
+              "target": "Package",
+              "version": "[1.15.0, )"
+            },
+            "OpenTelemetry.Instrumentation.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[1.15.0-beta.1, )"
+            },
+            "OpenTelemetry.Instrumentation.Http": {
+              "target": "Package",
+              "version": "[1.15.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.9.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Application/IdentityService.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Application/IdentityService.Application.csproj",
+        "projectName": "IdentityService.Application",
+        "projectPath": "/Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Application/IdentityService.Application.csproj",
+        "packagesPath": "/Users/rishabhtandon/.nuget/packages/",
+        "outputPath": "/Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/rishabhtandon/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-public/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Domain/IdentityService.Domain.csproj": {
+                "projectPath": "/Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Domain/IdentityService.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Domain/IdentityService.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Domain/IdentityService.Domain.csproj",
+        "projectName": "IdentityService.Domain",
+        "projectPath": "/Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Domain/IdentityService.Domain.csproj",
+        "packagesPath": "/Users/rishabhtandon/.nuget/packages/",
+        "outputPath": "/Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/rishabhtandon/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-public/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Infrastructure/IdentityService.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Infrastructure/IdentityService.Infrastructure.csproj",
+        "projectName": "IdentityService.Infrastructure",
+        "projectPath": "/Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Infrastructure/IdentityService.Infrastructure.csproj",
+        "packagesPath": "/Users/rishabhtandon/.nuget/packages/",
+        "outputPath": "/Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/rishabhtandon/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-public/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Application/IdentityService.Application.csproj": {
+                "projectPath": "/Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Application/IdentityService.Application.csproj"
+              },
+              "/Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Domain/IdentityService.Domain.csproj": {
+                "projectPath": "/Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Domain/IdentityService.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

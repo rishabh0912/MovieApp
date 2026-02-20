@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "G38QknSCawUfkPlCkJLogFopC5lGh1MsmSngzZLWiSo=",
+  "Source": "RatingService.Api",
+  "BasePath": "_content/RatingService.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

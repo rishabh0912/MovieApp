@@ -1,0 +1,317 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Api/MovieService.Api.csproj": {}
+  },
+  "projects": {
+    "/Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Api/MovieService.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Api/MovieService.Api.csproj",
+        "projectName": "MovieService.Api",
+        "projectPath": "/Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Api/MovieService.Api.csproj",
+        "packagesPath": "/Users/rishabhtandon/.nuget/packages/",
+        "outputPath": "/Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Api/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/rishabhtandon/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-public/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Application/MovieService.Application.csproj": {
+                "projectPath": "/Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Application/MovieService.Application.csproj"
+              },
+              "/Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Infrastructure/MovieService.Infrastructure.csproj": {
+                "projectPath": "/Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Infrastructure/MovieService.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "OpenTelemetry.Exporter.OpenTelemetryProtocol": {
+              "target": "Package",
+              "version": "[1.15.0, )"
+            },
+            "OpenTelemetry.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[1.15.0, )"
+            },
+            "OpenTelemetry.Instrumentation.AspNetCore": {
+              "target": "Package",
+              "version": "[1.15.0, )"
+            },
+            "OpenTelemetry.Instrumentation.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[1.15.0-beta.1, )"
+            },
+            "OpenTelemetry.Instrumentation.Http": {
+              "target": "Package",
+              "version": "[1.15.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.9.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Application/MovieService.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Application/MovieService.Application.csproj",
+        "projectName": "MovieService.Application",
+        "projectPath": "/Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Application/MovieService.Application.csproj",
+        "packagesPath": "/Users/rishabhtandon/.nuget/packages/",
+        "outputPath": "/Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/rishabhtandon/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-public/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Domain/MovieService.Domain.csproj": {
+                "projectPath": "/Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Domain/MovieService.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Domain/MovieService.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Domain/MovieService.Domain.csproj",
+        "projectName": "MovieService.Domain",
+        "projectPath": "/Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Domain/MovieService.Domain.csproj",
+        "packagesPath": "/Users/rishabhtandon/.nuget/packages/",
+        "outputPath": "/Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/rishabhtandon/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-public/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Infrastructure/MovieService.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Infrastructure/MovieService.Infrastructure.csproj",
+        "projectName": "MovieService.Infrastructure",
+        "projectPath": "/Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Infrastructure/MovieService.Infrastructure.csproj",
+        "packagesPath": "/Users/rishabhtandon/.nuget/packages/",
+        "outputPath": "/Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/rishabhtandon/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-public/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Application/MovieService.Application.csproj": {
+                "projectPath": "/Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Application/MovieService.Application.csproj"
+              },
+              "/Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Domain/MovieService.Domain.csproj": {
+                "projectPath": "/Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Domain/MovieService.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

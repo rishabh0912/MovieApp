@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "vrPIOw1iQBTv+Fc/jWNA93UMi4dT1MCM6srCzs8nI4U=",
+  "Source": "MovieService.Api",
+  "BasePath": "_content/MovieService.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

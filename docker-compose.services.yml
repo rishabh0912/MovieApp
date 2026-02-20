@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  identity-service:
+    build:
+      context: ./src/IdentityService/IdentityService.Api
+    container_name: identity-service
+    environment:
+      - ASPNETCORE_URLS: http://+:8080
+      - ConnectionStrings__DefaultConnection: Host=my_postgres;Port=5432;Database=IdentityDb;UserName=postgres;Password=postgres;
+      - Otlp__Endpoint: http://otel-collector:4317
+    ports:
+      - "5001:8080"
+    networks:
+      - movieapp-network
+
+  movie-service:
+    build:
+      context: ./src/MovieService/MovieService.Api
+    container_name: movie-service
+    environment:
+      - ASPNETCORE_URLS: http://+:8080
+      - ConnectionStrings__DefaultConnection: Host=my_postgres;Port=5432;Database=MovieDb;UserName=postgres;Password=postgres;
+      - Otlp__Endpoint: http://otel-collector:4317
+    ports:
+      - "5002:8080"
+    networks:
+      - movieapp-network
+  
+  rating-service:
+    build:
+      context: ./src/RatingService/RatingService.Api
+    container_name: rating-service
+    environment:
+      - ASPNETCORE_URLS: http://+:8080
+      - ConnectionStrings__DefaultConnection: Host=my_postgres;Port=5432;Database=RatingDb;UserName=postgres;Password=postgres;
+      - Otlp__Endpoint: http://otel-collector:4317
+    ports:
+      - "5003:8080"
+    networks:
+      - movieapp-network
+  
+networks:
+  movieapp-network:
+    external: true
+

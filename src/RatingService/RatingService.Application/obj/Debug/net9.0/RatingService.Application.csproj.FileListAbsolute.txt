@@ -1,0 +1,15 @@
+/Users/rishabhtandon/Projects/movieApp/src/RatingService/RatingService.Application/bin/Debug/net9.0/RatingService.Application.deps.json
+/Users/rishabhtandon/Projects/movieApp/src/RatingService/RatingService.Application/bin/Debug/net9.0/RatingService.Application.dll
+/Users/rishabhtandon/Projects/movieApp/src/RatingService/RatingService.Application/bin/Debug/net9.0/RatingService.Application.pdb
+/Users/rishabhtandon/Projects/movieApp/src/RatingService/RatingService.Application/obj/Debug/net9.0/RatingService.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/rishabhtandon/Projects/movieApp/src/RatingService/RatingService.Application/obj/Debug/net9.0/RatingService.Application.AssemblyInfoInputs.cache
+/Users/rishabhtandon/Projects/movieApp/src/RatingService/RatingService.Application/obj/Debug/net9.0/RatingService.Application.AssemblyInfo.cs
+/Users/rishabhtandon/Projects/movieApp/src/RatingService/RatingService.Application/obj/Debug/net9.0/RatingService.Application.csproj.CoreCompileInputs.cache
+/Users/rishabhtandon/Projects/movieApp/src/RatingService/RatingService.Application/obj/Debug/net9.0/RatingService.Application.dll
+/Users/rishabhtandon/Projects/movieApp/src/RatingService/RatingService.Application/obj/Debug/net9.0/refint/RatingService.Application.dll
+/Users/rishabhtandon/Projects/movieApp/src/RatingService/RatingService.Application/obj/Debug/net9.0/RatingService.Application.pdb
+/Users/rishabhtandon/Projects/movieApp/src/RatingService/RatingService.Application/obj/Debug/net9.0/ref/RatingService.Application.dll
+/Users/rishabhtandon/Projects/movieApp/src/RatingService/RatingService.Application/bin/Debug/net9.0/RatingService.Domain.dll
+/Users/rishabhtandon/Projects/movieApp/src/RatingService/RatingService.Application/bin/Debug/net9.0/RatingService.Domain.pdb
+/Users/rishabhtandon/Projects/movieApp/src/RatingService/RatingService.Application/obj/Debug/net9.0/RatingService.Application.csproj.AssemblyReference.cache
+/Users/rishabhtandon/Projects/movieApp/src/RatingService/RatingService.Application/obj/Debug/net9.0/RatingSe.758DCCF1.Up2Date
