@@ -1,4 +1,4 @@
-mame: Build & Push Docker Images to Docker Hub
+name: Build & Push Docker Images to Docker Hub
 
 on:
   push:
