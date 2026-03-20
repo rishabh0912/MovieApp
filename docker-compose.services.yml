@@ -45,6 +45,7 @@ services:
       - RabbitMq__Host=rabbitmq://rabbitmq
       - RabbitMq__Username=guest
       - RabbitMq__Password=guest
+      - Services__MovieService__BaseUrl=http://movie-service:8080
     ports:
       - "5003:8080"
     networks:
