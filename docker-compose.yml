@@ -24,4 +24,4 @@ volumes:
 
 networks:
   movieapp-network:
-    external: true
+    driver: bridge

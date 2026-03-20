@@ -75,5 +75,5 @@ services:
 
 networks:
   movieapp-network:
-    external: true
+    driver: bridge
 
