@@ -1,8 +1,8 @@
 import { Console } from "console";
 
-const IDENTITY_BASE = "http://localhost:5073"
-const MOVIE_BASE = "http://localhost:5134"
-const RATING_BASE = "http://localhost:5048"
+const IDENTITY_BASE = process.env.NEXT_PUBLIC_IDENTITY_URL || "http://localhost:5001"
+const MOVIE_BASE = process.env.NEXT_PUBLIC_MOVIE_URL || "http://localhost:5002"
+const RATING_BASE = process.env.NEXT_PUBLIC_RATING_URL || "http://localhost:5003"
 
 export async function getMovies(page: number=1, pageSize: number=10) {
     const res = await fetch(`${MOVIE_BASE}/movies?page=${page}&pageSize=${pageSize}`, {cache: 'no-store'});

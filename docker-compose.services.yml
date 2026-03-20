@@ -54,7 +54,9 @@ services:
     image: rish0912/movieapp-frontend:latest
     container_name: web-app
     environment:
-      - NEXT_PUBLIC_API_URL=http://localhost:5001
+      - NEXT_PUBLIC_IDENTITY_URL=http://localhost:5001
+      - NEXT_PUBLIC_MOVIE_URL=http://localhost:5002
+      - NEXT_PUBLIC_RATING_URL=http://localhost:5003
     ports:
       - "3000:3000"
     networks:
