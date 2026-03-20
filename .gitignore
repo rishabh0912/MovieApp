@@ -22,6 +22,9 @@ node_modules/
 package-lock.json
 yarn.lock
 
+# Exception: Allow frontend lock files (needed for Docker builds)
+!frontend/web-app/package-lock.json
+
 # Logs
 *.log
 npm-debug.log*
