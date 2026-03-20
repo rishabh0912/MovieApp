@@ -17,3 +17,4 @@
 /Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Infrastructure/obj/Debug/net9.0/MovieSer.C9424D60.Up2Date
 /Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Infrastructure/bin/Debug/net9.0/MovieService.Infrastructure.runtimeconfig.json
 /Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Infrastructure/obj/Debug/net9.0/MovieService.Infrastructure.genruntimeconfig.cache
+/Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Infrastructure/obj/Debug/net9.0/MovieService.Infrastructure.sourcelink.json

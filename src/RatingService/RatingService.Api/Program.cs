@@ -10,6 +10,8 @@ using RatingService.Application.Service;
 using RatingService.Infrastructure.Data;
 using RatingService.Infrastructure.Repository;
 using Microsoft.OpenApi.Models;
+using MassTransit;
+using RatingService.Application.Clients;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -53,7 +55,15 @@ builder.Services.AddOpenTelemetry()
                 options.Endpoint = new Uri(builder.Configuration["Otlp:Endpoint"]!);
             });
     });
+builder.Services.AddHealthChecks();
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddHttpClient<MovieServiceClient>((sp, client) =>
+{
+    var config = sp.GetRequiredService<IConfiguration>();
+    var baseUrl = config["Services:MovieService:BaseUrl"];
+
+    client.BaseAddress = new Uri(baseUrl!);
+});
 builder.Services.AddSwaggerGen(c =>
 {
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
@@ -80,15 +90,39 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
 });
-builder.WebHost.ConfigureKestrel(options =>
+// builder.WebHost.ConfigureKestrel(options =>
+// {
+//     options.ListenAnyIP(8080);
+// });
+builder.Services.AddCors(options =>
 {
-    options.ListenAnyIP(8080);
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy.WithOrigins("http://localhost:3000")
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowCredentials();
+    });
 });
+builder.Services.AddMassTransit(x =>
+{
+    x.UsingRabbitMq((ctx, cfg) =>
+    {
+        cfg.Host(new Uri(builder.Configuration["RabbitMq:Host"]!), h =>
+        {
+            h.Username(builder.Configuration["RabbitMq:Username"] ?? "guest");
+            h.Password(builder.Configuration["RabbitMq:Password"] ?? "guest");
+        });
+    });
+});
+
 var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
+app.UseCors("AllowFrontend");
 app.UseMiddleware<ExceptionMiddleware>();
 app.UseAuthentication();
 app.UseAuthorization();
+app.MapHealthChecks("/health");
 app.MapControllers();
 app.Run();

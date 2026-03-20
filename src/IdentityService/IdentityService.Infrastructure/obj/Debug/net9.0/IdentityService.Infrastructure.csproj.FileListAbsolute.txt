@@ -17,3 +17,4 @@
 /Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Infrastructure/obj/Debug/net9.0/Identity.1C9B4358.Up2Date
 /Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Infrastructure/bin/Debug/net9.0/IdentityService.Infrastructure.runtimeconfig.json
 /Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Infrastructure/obj/Debug/net9.0/IdentityService.Infrastructure.genruntimeconfig.cache
+/Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Infrastructure/obj/Debug/net9.0/IdentityService.Infrastructure.sourcelink.json

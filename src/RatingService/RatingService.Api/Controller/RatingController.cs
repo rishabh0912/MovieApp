@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -55,5 +57,15 @@ namespace RatingService.Api.Controller
             await _movieRatingService.UpdateRating(ratingDto);
             return NoContent();
         }
+
+        [HttpGet("user/movies")]
+        [Authorize]
+        public async Task<IActionResult> GetUserRatedMovies(
+            [FromQuery] int page=1,
+            [FromQuery] int pageSize=5)
+        {                     
+            var result = await _movieRatingService.GetMoviesByUserId(page, pageSize);
+            return Ok(result);  
+        }        
     }
 }

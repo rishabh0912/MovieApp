@@ -42,14 +42,15 @@ namespace MovieService.Application.Service
                 ReleaseDate = movieDetails.ReleaseDate,
                 PosterUrl = movieDetails.PosterUrl,
                 AverageRating = movieDetails.AverageRating,
+                TotalRatings = movieDetails.RatingCount,
                 Genres = movieDetails.MovieGenres.Select(mg => mg.Genre.Name).ToList(),
                 Casts = movieDetails.MovieCasts.Select(mc => mc.Cast.Name).ToList()
             };
         }
 
-        public async Task<IEnumerable<MovieDto>> GetMovies()
+        public async Task<IEnumerable<MovieDto>> GetMovies(int page, int pageSize)
         {
-            var movies = await _movieRepository.GetMovies();
+            var movies = await _movieRepository.GetMovies(page, pageSize);
             return movies.Select(m => new MovieDto
             {
                 Id = m.Id,
@@ -58,6 +59,7 @@ namespace MovieService.Application.Service
                 ReleaseDate = m.ReleaseDate,
                 PosterUrl = m.PosterUrl,
                 AverageRating = m.AverageRating,
+                TotalRatings = m.RatingCount,
                 Genres = m.MovieGenres.Select(mg => mg.Genre.Name).ToList(),
                 Casts = m.MovieCasts.Select(mc => mc.Cast.Name).ToList()
             })
@@ -75,6 +77,25 @@ namespace MovieService.Application.Service
                 ReleaseDate = m.ReleaseDate,
                 PosterUrl = m.PosterUrl,
                 AverageRating = m.AverageRating,
+                TotalRatings = m.RatingCount,
+                Genres = m.MovieGenres.Select(mg => mg.Genre.Name).ToList(),
+                Casts = m.MovieCasts.Select(mc => mc.Cast.Name).ToList()
+            })
+            .ToList().AsEnumerable();
+        }
+
+        public async Task<IEnumerable<MovieDto?>> GetMoviesByIds(IEnumerable<Guid> movieIds)
+        {
+            var movies = await _movieRepository.GetMoviesByIds(movieIds);
+            return movies.Select(m => new MovieDto
+            {
+                Id = m.Id,
+                Title = m.Title,
+                Description = m.Description,
+                ReleaseDate = m.ReleaseDate,
+                PosterUrl = m.PosterUrl,
+                AverageRating = m.AverageRating,
+                TotalRatings = m.RatingCount,                
                 Genres = m.MovieGenres.Select(mg => mg.Genre.Name).ToList(),
                 Casts = m.MovieCasts.Select(mc => mc.Cast.Name).ToList()
             })

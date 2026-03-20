@@ -13,3 +13,4 @@
 /Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Application/bin/Debug/net9.0/MovieService.Domain.pdb
 /Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Application/obj/Debug/net9.0/MovieService.Application.csproj.AssemblyReference.cache
 /Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Application/obj/Debug/net9.0/MovieSer.F7856FA4.Up2Date
+/Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Application/obj/Debug/net9.0/MovieService.Application.sourcelink.json

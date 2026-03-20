@@ -10,6 +10,8 @@ using OpenTelemetry.Trace;
 using OpenTelemetry.Resources;
 using MovieService.Api.Middleware;
 using Microsoft.OpenApi.Models;
+using MassTransit;
+using MovieService.Api.Consumers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -35,6 +37,7 @@ builder.Services.AddOpenTelemetry()
                 options.Endpoint = new Uri(builder.Configuration["Otlp:Endpoint"]!);    
             });
     });
+builder.Services.AddHealthChecks();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -62,13 +65,38 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
 });
-builder.WebHost.ConfigureKestrel(options =>
+// builder.WebHost.ConfigureKestrel(options =>
+// {
+//     options.ListenAnyIP(8080);
+// });
+builder.Services.AddCors(options =>
 {
-    options.ListenAnyIP(8080);
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy.WithOrigins("http://localhost:3000")
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowCredentials();
+    });
+});
+builder.Services.AddMassTransit(x =>
+{
+    x.AddConsumer<RatingUpdatedConsumer>();
+    x.UsingRabbitMq((ctx, cfg) =>
+    {
+        cfg.Host(new Uri(builder.Configuration["RabbitMq:Host"]!), h =>
+        {
+            h.Username(builder.Configuration["RabbitMq:Username"] ?? "guest");
+            h.Password(builder.Configuration["RabbitMq:Password"] ?? "guest");
+        });
+        cfg.ConfigureEndpoints(ctx); // --> needed here because we have consumer
+    });
 });
 var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
+app.UseCors("AllowFrontend");
 app.UseMiddleware<ExceptionMiddleware>();
+app.MapHealthChecks("/health");
 app.MapControllers();
 app.Run();

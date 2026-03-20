@@ -13,6 +13,7 @@ namespace MovieService.Application.DTOs
         public DateTime ReleaseDate { get; set; }
         public string PosterUrl { get; set; } = string.Empty;
         public double AverageRating { get; set; }   
+        public int TotalRatings { get; set; }
         public List<string> Genres { get; set; } = new List<string>();
         public List<string> Casts { get; set; } = new List<string>();
     }

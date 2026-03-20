@@ -8,9 +8,10 @@ namespace MovieService.Application.Interfaces
 {
     public interface IMovieRepoService
     {
-        Task<IEnumerable<MovieDto>> GetMovies();
+        Task<IEnumerable<MovieDto>> GetMovies(int page, int pageSize);
         Task<MovieDto?> GetMovieById(Guid id);
         Task<IEnumerable<MovieDto>> GetMoviesByGenre(int genreId);
         Task<List<GenreDto>> GetGenres();
+        Task <IEnumerable<MovieDto?>> GetMoviesByIds(IEnumerable<Guid> movieIds);
     }
 }

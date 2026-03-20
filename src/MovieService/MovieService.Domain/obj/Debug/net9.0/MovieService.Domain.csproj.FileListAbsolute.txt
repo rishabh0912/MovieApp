@@ -9,3 +9,4 @@
 /Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Domain/obj/Debug/net9.0/refint/MovieService.Domain.dll
 /Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Domain/obj/Debug/net9.0/MovieService.Domain.pdb
 /Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Domain/obj/Debug/net9.0/ref/MovieService.Domain.dll
+/Users/rishabhtandon/Projects/movieApp/src/MovieService/MovieService.Domain/obj/Debug/net9.0/MovieService.Domain.sourcelink.json

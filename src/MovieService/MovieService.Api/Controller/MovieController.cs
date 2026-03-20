@@ -21,9 +21,11 @@ namespace MovieService.Api.Controller
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetMovies()
+        public async Task<IActionResult> GetMovies(
+            [FromQuery] int page = 1,
+            [FromQuery] int pageSize = 5)
         {
-            var movies = await _movieRepoService.GetMovies();
+            var movies = await _movieRepoService.GetMovies(page, pageSize);
             return Ok(movies);
         }
 
@@ -50,6 +52,13 @@ namespace MovieService.Api.Controller
         {
             var genres = await _movieRepoService.GetGenres();
             return Ok(genres);
+        }
+
+        [HttpGet("batch")]
+        public async Task<IActionResult> GetMoviesByIds([FromQuery] IEnumerable<Guid> Ids)
+        {
+            var movies = await _movieRepoService.GetMoviesByIds(Ids);
+            return Ok(movies);
         }
     }
 }

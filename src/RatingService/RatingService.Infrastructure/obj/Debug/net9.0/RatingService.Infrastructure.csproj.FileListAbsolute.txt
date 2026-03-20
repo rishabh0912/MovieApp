@@ -17,3 +17,4 @@
 /Users/rishabhtandon/Projects/movieApp/src/RatingService/RatingService.Infrastructure/obj/Debug/net9.0/RatingSe.4F12ACB5.Up2Date
 /Users/rishabhtandon/Projects/movieApp/src/RatingService/RatingService.Infrastructure/bin/Debug/net9.0/RatingService.Infrastructure.runtimeconfig.json
 /Users/rishabhtandon/Projects/movieApp/src/RatingService/RatingService.Infrastructure/obj/Debug/net9.0/RatingService.Infrastructure.genruntimeconfig.cache
+/Users/rishabhtandon/Projects/movieApp/src/RatingService/RatingService.Infrastructure/obj/Debug/net9.0/RatingService.Infrastructure.sourcelink.json

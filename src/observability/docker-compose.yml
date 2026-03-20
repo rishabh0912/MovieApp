@@ -6,6 +6,9 @@ services:
     container_name: jaeger
     ports:
       - "16686:16686"
+    networks:
+      - movieapp-network
+
   
   otel-collector:
     image: otel/opentelemetry-collector-contrib:latest
@@ -16,6 +19,12 @@ services:
       - "4317:4317"
     depends_on:
       - jaeger
+    networks:
+      - movieapp-network
 
 volumes:
   postgres_data:
+
+networks:
+  movieapp-network:
+    external: true

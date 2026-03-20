@@ -9,3 +9,4 @@
 /Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Domain/obj/Debug/net9.0/refint/IdentityService.Domain.dll
 /Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Domain/obj/Debug/net9.0/IdentityService.Domain.pdb
 /Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Domain/obj/Debug/net9.0/ref/IdentityService.Domain.dll
+/Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Domain/obj/Debug/net9.0/IdentityService.Domain.sourcelink.json

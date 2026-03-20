@@ -3,12 +3,12 @@ version: '3.8'
 services:
   identity-service:
     build:
-      context: ./src/IdentityService/IdentityService.Api
+      context: ./src/IdentityService
     container_name: identity-service
     environment:
-      - ASPNETCORE_URLS: http://+:8080
-      - ConnectionStrings__DefaultConnection: Host=my_postgres;Port=5432;Database=IdentityDb;UserName=postgres;Password=postgres;
-      - Otlp__Endpoint: http://otel-collector:4317
+      - ASPNETCORE_URLS=http://+:8080
+      - ConnectionStrings__DefaultConnection=Host=my_postgres;Port=5432;Database=IdentityDb;Username=postgres;Password=postgres;
+      - Otlp__Endpoint=http://otel-collector:4317
     ports:
       - "5001:8080"
     networks:
@@ -16,12 +16,17 @@ services:
 
   movie-service:
     build:
-      context: ./src/MovieService/MovieService.Api
+      context: ./src/MovieService
     container_name: movie-service
+    depends_on:
+      - rabbitmq
     environment:
-      - ASPNETCORE_URLS: http://+:8080
-      - ConnectionStrings__DefaultConnection: Host=my_postgres;Port=5432;Database=MovieDb;UserName=postgres;Password=postgres;
-      - Otlp__Endpoint: http://otel-collector:4317
+      - ASPNETCORE_URLS=http://+:8080
+      - ConnectionStrings__DefaultConnection=Host=my_postgres;Port=5432;Database=MovieDb;Username=postgres;Password=postgres;
+      - Otlp__Endpoint=http://otel-collector:4317
+      - RabbitMq__Host=rabbitmq://rabbitmq
+      - RabbitMq__Username=guest
+      - RabbitMq__Password=guest
     ports:
       - "5002:8080"
     networks:
@@ -29,17 +34,34 @@ services:
   
   rating-service:
     build:
-      context: ./src/RatingService/RatingService.Api
+      context: ./src/RatingService
     container_name: rating-service
+    depends_on:
+      - rabbitmq
     environment:
-      - ASPNETCORE_URLS: http://+:8080
-      - ConnectionStrings__DefaultConnection: Host=my_postgres;Port=5432;Database=RatingDb;UserName=postgres;Password=postgres;
-      - Otlp__Endpoint: http://otel-collector:4317
+      - ASPNETCORE_URLS=http://+:8080
+      - ConnectionStrings__DefaultConnection=Host=my_postgres;Port=5432;Database=RatingDb;Username=postgres;Password=postgres;
+      - Otlp__Endpoint=http://otel-collector:4317
+      - JwtSettings__SecretKey=SecretForMovieAppRequiredToCreateJwt
+      - JwtSettings__Issuer=movieApp
+      - JwtSettings__Audience=movieApp-clients
+      - RabbitMq__Host=rabbitmq://rabbitmq
+      - RabbitMq__Username=guest
+      - RabbitMq__Password=guest
     ports:
       - "5003:8080"
     networks:
       - movieapp-network
   
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - movieapp-network
+
 networks:
   movieapp-network:
     external: true

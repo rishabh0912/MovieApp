@@ -153,3 +153,8 @@
 /Users/rishabhtandon/Projects/movieApp/src/RatingService/RatingService.Api/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/rishabhtandon/Projects/movieApp/src/RatingService/RatingService.Api/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
 /Users/rishabhtandon/Projects/movieApp/src/RatingService/RatingService.Api/obj/Debug/net9.0/RatingService.Api.MvcApplicationPartsAssemblyInfo.cs
+/Users/rishabhtandon/Projects/movieApp/src/RatingService/RatingService.Api/obj/Debug/net9.0/RatingService.Api.sourcelink.json
+/Users/rishabhtandon/Projects/movieApp/src/RatingService/RatingService.Api/bin/Debug/net9.0/MassTransit.dll
+/Users/rishabhtandon/Projects/movieApp/src/RatingService/RatingService.Api/bin/Debug/net9.0/MassTransit.Abstractions.dll
+/Users/rishabhtandon/Projects/movieApp/src/RatingService/RatingService.Api/bin/Debug/net9.0/MassTransit.RabbitMqTransport.dll
+/Users/rishabhtandon/Projects/movieApp/src/RatingService/RatingService.Api/bin/Debug/net9.0/RabbitMQ.Client.dll

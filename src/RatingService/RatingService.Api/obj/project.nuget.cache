@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Cj/CIfkbxJM=",
+  "dgSpecHash": "+ZYLQvkQpAU=",
   "success": true,
   "projectFilePath": "/Users/rishabhtandon/Projects/movieApp/src/RatingService/RatingService.Api/RatingService.Api.csproj",
   "expectedPackageFiles": [
     "/Users/rishabhtandon/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
+    "/Users/rishabhtandon/.nuget/packages/masstransit/8.3.6/masstransit.8.3.6.nupkg.sha512",
+    "/Users/rishabhtandon/.nuget/packages/masstransit.abstractions/8.3.6/masstransit.abstractions.8.3.6.nupkg.sha512",
+    "/Users/rishabhtandon/.nuget/packages/masstransit.rabbitmq/8.3.6/masstransit.rabbitmq.8.3.6.nupkg.sha512",
     "/Users/rishabhtandon/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/9.0.2/microsoft.aspnetcore.authentication.jwtbearer.9.0.2.nupkg.sha512",
     "/Users/rishabhtandon/.nuget/packages/microsoft.bcl.asyncinterfaces/7.0.0/microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
     "/Users/rishabhtandon/.nuget/packages/microsoft.build.framework/17.8.3/microsoft.build.framework.17.8.3.nupkg.sha512",
@@ -30,6 +33,8 @@
     "/Users/rishabhtandon/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/9.0.2/microsoft.extensions.dependencyinjection.abstractions.9.0.2.nupkg.sha512",
     "/Users/rishabhtandon/.nuget/packages/microsoft.extensions.dependencymodel/9.0.2/microsoft.extensions.dependencymodel.9.0.2.nupkg.sha512",
     "/Users/rishabhtandon/.nuget/packages/microsoft.extensions.diagnostics.abstractions/9.0.0/microsoft.extensions.diagnostics.abstractions.9.0.0.nupkg.sha512",
+    "/Users/rishabhtandon/.nuget/packages/microsoft.extensions.diagnostics.healthchecks/9.0.0/microsoft.extensions.diagnostics.healthchecks.9.0.0.nupkg.sha512",
+    "/Users/rishabhtandon/.nuget/packages/microsoft.extensions.diagnostics.healthchecks.abstractions/9.0.0/microsoft.extensions.diagnostics.healthchecks.abstractions.9.0.0.nupkg.sha512",
     "/Users/rishabhtandon/.nuget/packages/microsoft.extensions.fileproviders.abstractions/9.0.0/microsoft.extensions.fileproviders.abstractions.9.0.0.nupkg.sha512",
     "/Users/rishabhtandon/.nuget/packages/microsoft.extensions.hosting.abstractions/9.0.0/microsoft.extensions.hosting.abstractions.9.0.0.nupkg.sha512",
     "/Users/rishabhtandon/.nuget/packages/microsoft.extensions.logging/9.0.2/microsoft.extensions.logging.9.0.2.nupkg.sha512",
@@ -56,6 +61,7 @@
     "/Users/rishabhtandon/.nuget/packages/opentelemetry.instrumentation.aspnetcore/1.15.0/opentelemetry.instrumentation.aspnetcore.1.15.0.nupkg.sha512",
     "/Users/rishabhtandon/.nuget/packages/opentelemetry.instrumentation.entityframeworkcore/1.15.0-beta.1/opentelemetry.instrumentation.entityframeworkcore.1.15.0-beta.1.nupkg.sha512",
     "/Users/rishabhtandon/.nuget/packages/opentelemetry.instrumentation.http/1.15.0/opentelemetry.instrumentation.http.1.15.0.nupkg.sha512",
+    "/Users/rishabhtandon/.nuget/packages/rabbitmq.client/7.0.0/rabbitmq.client.7.0.0.nupkg.sha512",
     "/Users/rishabhtandon/.nuget/packages/swashbuckle.aspnetcore/6.9.0/swashbuckle.aspnetcore.6.9.0.nupkg.sha512",
     "/Users/rishabhtandon/.nuget/packages/swashbuckle.aspnetcore.swagger/6.9.0/swashbuckle.aspnetcore.swagger.6.9.0.nupkg.sha512",
     "/Users/rishabhtandon/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.9.0/swashbuckle.aspnetcore.swaggergen.6.9.0.nupkg.sha512",
@@ -70,11 +76,12 @@
     "/Users/rishabhtandon/.nuget/packages/system.composition.typedparts/7.0.0/system.composition.typedparts.7.0.0.nupkg.sha512",
     "/Users/rishabhtandon/.nuget/packages/system.diagnostics.diagnosticsource/10.0.0/system.diagnostics.diagnosticsource.10.0.0.nupkg.sha512",
     "/Users/rishabhtandon/.nuget/packages/system.identitymodel.tokens.jwt/8.0.1/system.identitymodel.tokens.jwt.8.0.1.nupkg.sha512",
-    "/Users/rishabhtandon/.nuget/packages/system.io.pipelines/7.0.0/system.io.pipelines.7.0.0.nupkg.sha512",
+    "/Users/rishabhtandon/.nuget/packages/system.io.pipelines/8.0.0/system.io.pipelines.8.0.0.nupkg.sha512",
     "/Users/rishabhtandon/.nuget/packages/system.reflection.metadata/7.0.0/system.reflection.metadata.7.0.0.nupkg.sha512",
     "/Users/rishabhtandon/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "/Users/rishabhtandon/.nuget/packages/system.text.json/9.0.2/system.text.json.9.0.2.nupkg.sha512",
-    "/Users/rishabhtandon/.nuget/packages/system.threading.channels/7.0.0/system.threading.channels.7.0.0.nupkg.sha512"
+    "/Users/rishabhtandon/.nuget/packages/system.threading.channels/7.0.0/system.threading.channels.7.0.0.nupkg.sha512",
+    "/Users/rishabhtandon/.nuget/packages/system.threading.ratelimiting/8.0.0/system.threading.ratelimiting.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }

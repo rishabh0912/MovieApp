@@ -15,5 +15,6 @@ namespace RatingService.Application.Interfaces
         Task UpdateRating(RequestRatingDto ratingDto);
         Task DeleteRating(Guid ratingId);
         Task<IEnumerable<ResponseRatingDto>> GetRatingsByMovieId(List<Guid> movieIds);
+        Task<IEnumerable<ResponseRatingDto>> GetMoviesByUserId(int page, int pageSize);
     }
 }

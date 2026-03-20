@@ -14,5 +14,6 @@ namespace RatingService.Application.DTOs
         public string? Review { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime? UpdatedAt { get; set; }
+        public MovieDto? Movie { get; set; }
     }
 }

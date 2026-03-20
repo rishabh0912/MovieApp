@@ -23,6 +23,17 @@ builder.Services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
 //Services
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+// Allow cors
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy.WithOrigins("http://localhost:3000")
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowCredentials();
+    });
+});
 //Controllers
 builder.Services.AddControllers();
 
@@ -44,6 +55,7 @@ builder.Services.AddOpenTelemetry()
                 options.Endpoint = new Uri(builder.Configuration["Otlp:Endpoint"]!);
             });
     });
+builder.Services.AddHealthChecks();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -71,13 +83,15 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
 });
-builder.WebHost.ConfigureKestrel(options =>
-{
-    options.ListenAnyIP(8080);
-});
+// builder.WebHost.ConfigureKestrel(options =>
+// {
+//     options.ListenAnyIP(8080);
+// });
 var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
+app.UseCors("AllowFrontend");
 app.UseMiddleware<ExceptionMiddleware>();
+app.MapHealthChecks("/health");
 app.MapControllers();
 app.Run();

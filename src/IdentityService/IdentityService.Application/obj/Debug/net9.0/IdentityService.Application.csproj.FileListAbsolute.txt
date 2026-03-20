@@ -13,3 +13,4 @@
 /Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Application/bin/Debug/net9.0/IdentityService.Domain.pdb
 /Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Application/obj/Debug/net9.0/IdentityService.Application.csproj.AssemblyReference.cache
 /Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Application/obj/Debug/net9.0/Identity.52144512.Up2Date
+/Users/rishabhtandon/Projects/movieApp/src/IdentityService/IdentityService.Application/obj/Debug/net9.0/IdentityService.Application.sourcelink.json

@@ -9,3 +9,4 @@
 /Users/rishabhtandon/Projects/movieApp/src/RatingService/RatingService.Domain/obj/Debug/net9.0/refint/RatingService.Domain.dll
 /Users/rishabhtandon/Projects/movieApp/src/RatingService/RatingService.Domain/obj/Debug/net9.0/RatingService.Domain.pdb
 /Users/rishabhtandon/Projects/movieApp/src/RatingService/RatingService.Domain/obj/Debug/net9.0/ref/RatingService.Domain.dll
+/Users/rishabhtandon/Projects/movieApp/src/RatingService/RatingService.Domain/obj/Debug/net9.0/RatingService.Domain.sourcelink.json

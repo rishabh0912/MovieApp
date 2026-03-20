@@ -42,5 +42,14 @@ namespace RatingService.Infrastructure.Repository
             _context.Ratings.Update(rating);
             await _context.SaveChangesAsync();
         }
+
+        public async Task<IEnumerable<Rating>> GetMoviesByUserId(Guid userId, int page, int pageSize)
+        {
+            return await _context.Ratings
+                .Where(r => r.UserId == userId)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+        }
     }
 }
