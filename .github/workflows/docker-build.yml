@@ -25,6 +25,7 @@ jobs:
         with:
           context: ./src/IdentityService
           push: true
+          platforms: linux/amd64,linux/arm64
           tags: ${{ secrets.DOCKER_USERNAME }}/movieapp-identity:latest
 
       - name: Build and Push Movie Service
@@ -32,6 +33,7 @@ jobs:
         with:
           context: ./src/MovieService
           push: true
+          platforms: linux/amd64,linux/arm64
           tags: ${{ secrets.DOCKER_USERNAME }}/movieapp-movie:latest
       
       - name: Build and Push Rating Service
@@ -39,6 +41,7 @@ jobs:
         with:
           context: ./src/RatingService
           push: true
+          platforms: linux/amd64,linux/arm64
           tags: ${{ secrets.DOCKER_USERNAME }}/movieapp-rating:latest
 
       - name: Build and Push Frontend
@@ -46,4 +49,5 @@ jobs:
         with: 
           context: ./frontend/web-app
           push: true
+          platforms: linux/amd64,linux/arm64
           tags: ${{ secrets.DOCKER_USERNAME }}/movieapp-frontend:latest
