@@ -2,8 +2,7 @@ version: '3.8'
 
 services:
   identity-service:
-    build:
-      context: ./src/IdentityService
+    image: rish0912/movieapp-identity:latest
     container_name: identity-service
     environment:
       - ASPNETCORE_URLS=http://+:8080
@@ -15,8 +14,7 @@ services:
       - movieapp-network
 
   movie-service:
-    build:
-      context: ./src/MovieService
+    image: rish0912/movieapp-movie:latest
     container_name: movie-service
     depends_on:
       - rabbitmq
@@ -33,8 +31,7 @@ services:
       - movieapp-network
   
   rating-service:
-    build:
-      context: ./src/RatingService
+    image: rish0912/movieapp-rating:latest
     container_name: rating-service
     depends_on:
       - rabbitmq
@@ -53,6 +50,20 @@ services:
     networks:
       - movieapp-network
   
+  frontend:
+    image: rish0912/movieapp-frontend:latest
+    container_name: web-app
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:5001
+    ports:
+      - "3000:3000"
+    networks:
+      - movieapp-network
+    depends_on:
+      - identity-service
+      - movie-service
+      - rating-service
+
   rabbitmq:
     image: rabbitmq:3-management
     container_name: rabbitmq
