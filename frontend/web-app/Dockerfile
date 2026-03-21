@@ -2,6 +2,14 @@
 FROM node:20-alpine AS build
 WORKDIR /app
 
+# Accept build-time API URLs (baked into the Next.js bundle)
+ARG NEXT_PUBLIC_IDENTITY_URL=http://localhost:5001
+ARG NEXT_PUBLIC_MOVIE_URL=http://localhost:5002
+ARG NEXT_PUBLIC_RATING_URL=http://localhost:5003
+ENV NEXT_PUBLIC_IDENTITY_URL=$NEXT_PUBLIC_IDENTITY_URL
+ENV NEXT_PUBLIC_MOVIE_URL=$NEXT_PUBLIC_MOVIE_URL
+ENV NEXT_PUBLIC_RATING_URL=$NEXT_PUBLIC_RATING_URL
+
 # Copy package files
 COPY package*.json ./
 

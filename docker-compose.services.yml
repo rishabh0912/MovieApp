@@ -8,6 +8,7 @@ services:
       - ASPNETCORE_URLS=http://+:8080
       - ConnectionStrings__DefaultConnection=Host=my_postgres;Port=5432;Database=IdentityDb;Username=postgres;Password=postgres;
       - Otlp__Endpoint=http://otel-collector:4317
+      - Cors__AllowedOrigins=http://${EC2_HOST:-localhost}:3000
     ports:
       - "5001:8080"
     networks:
@@ -25,6 +26,7 @@ services:
       - RabbitMq__Host=rabbitmq://rabbitmq
       - RabbitMq__Username=guest
       - RabbitMq__Password=guest
+      - Cors__AllowedOrigins=http://${EC2_HOST:-localhost}:3000
     ports:
       - "5002:8080"
     networks:
@@ -46,6 +48,7 @@ services:
       - RabbitMq__Username=guest
       - RabbitMq__Password=guest
       - Services__MovieService__BaseUrl=http://movie-service:8080
+      - Cors__AllowedOrigins=http://${EC2_HOST:-localhost}:3000
     ports:
       - "5003:8080"
     networks:
@@ -54,10 +57,6 @@ services:
   frontend:
     image: rish0912/movieapp-frontend:latest
     container_name: web-app
-    environment:
-      - NEXT_PUBLIC_IDENTITY_URL=http://localhost:5001
-      - NEXT_PUBLIC_MOVIE_URL=http://localhost:5002
-      - NEXT_PUBLIC_RATING_URL=http://localhost:5003
     ports:
       - "3000:3000"
     networks:
