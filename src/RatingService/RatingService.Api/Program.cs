@@ -50,6 +50,7 @@ builder.Services.AddOpenTelemetry()
             .AddAspNetCoreInstrumentation()
             .AddHttpClientInstrumentation()
             .AddEntityFrameworkCoreInstrumentation()
+            .AddSource("MassTransit") // propagates trace context across RabbitMQ messages
             .AddOtlpExporter(options =>
             {
                 options.Endpoint = new Uri(builder.Configuration["Otlp:Endpoint"]!);

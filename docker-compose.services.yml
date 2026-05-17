@@ -57,6 +57,8 @@ services:
   frontend:
     image: rish0912/movieapp-frontend:latest
     container_name: web-app
+    environment:
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://otel-collector:4317
     ports:
       - "3000:3000"
     networks:
